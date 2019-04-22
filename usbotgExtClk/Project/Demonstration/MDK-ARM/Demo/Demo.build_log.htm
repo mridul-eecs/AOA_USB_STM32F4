@@ -1,0 +1,223 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.25.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Kapil Sharma, Jellyfish Technology, LIC=3UUAR-K24BZ-TIT5L-0E46U-ISF4L-FWYC2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.25.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.0.0
+Dialog DLL:      DCM.DLL V1.17.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.34.0.0
+ 
+<h2>Project:</h2>
+D:\Kapil\KAps\usbotgMridul\Project\Demonstration\MDK-ARM\STM32F4-Discovery_Demo.uvprojx
+Project File Date:  02/11/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Demo'
+compiling usb_bsp.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_it.c...
+..\stm32f4xx_it.c(43): warning:  #1295-D: Deprecated declaration poweroff - give arg types
+  extern void poweroff();
+..\stm32f4xx_it.c(149): warning:  #223-D: function "TimingDelay_Decrement" declared implicitly
+      TimingDelay_Decrement();
+..\stm32f4xx_it.c(166): warning:  #223-D: function "USB_OTG_BSP_TimerIRQ" declared implicitly
+  		USB_OTG_BSP_TimerIRQ(&USB_OTG_Core_dev);
+..\stm32f4xx_it.c: 3 warnings, 0 errors
+compiling main.c...
+..\main.c(183): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+  					memset(msg,0,strlen(msg));
+..\main.c(220): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOA, GPIO_Pin_8, 1);   //ctl1
+..\main.c(221): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_15, 1);   //ctl2
+..\main.c(222): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_14, 1);   //ctl3     
+..\main.c(223): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_0, 1);   //boost enable 
+..\main.c(231): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);	
+..\main.c(231): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);	
+..\main.c(231): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);	
+..\main.c(231): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);	
+..\main.c(231): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);	
+..\main.c(231): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);	
+..\main.c(241): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOA, GPIO_Pin_8, 1);   //ctl1
+..\main.c(242): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_15, 1);   //ctl2
+..\main.c(243): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_14, 1);   //ctl3     
+..\main.c(244): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_0, 1);   //boost enable 
+..\main.c(248): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOA, GPIO_Pin_8, 0);   //ctl1
+..\main.c(249): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_15, 0);   //ctl2
+..\main.c(250): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_14, 0);   //ctl3     
+..\main.c(251): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_0, 0);   //boost enable 
+..\main.c(337): warning:  #188-D: enumerated type mixed with another type
+    GPIO_WriteBit(GPIOC, GPIO_Pin_14, led1);
+..\main.c(338): warning:  #188-D: enumerated type mixed with another type
+    GPIO_WriteBit(GPIOC, GPIO_Pin_13, led2);
+..\main.c(339): warning:  #188-D: enumerated type mixed with another type
+    GPIO_WriteBit(GPIOB, GPIO_Pin_8, led3);
+..\main.c(340): warning:  #188-D: enumerated type mixed with another type
+    GPIO_WriteBit(GPIOB, GPIO_Pin_5, led4);
+..\main.c(440): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .020;
+..\main.c(442): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .040;
+..\main.c(444): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .080;
+..\main.c(446): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .160;
+..\main.c(448): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .320;
+..\main.c(450): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .640;
+..\main.c(452): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += 1.280;  
+..\main.c(471): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(voltage >= 2.9 && voltage < 3.225){
+..\main.c(471): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(voltage >= 2.9 && voltage < 3.225){
+..\main.c(474): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(voltage >= 3.225 && voltage < 3.55){
+..\main.c(474): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(voltage >= 3.225 && voltage < 3.55){
+..\main.c(477): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(voltage >= 3.55 && voltage < 3.875){
+..\main.c(477): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(voltage >= 3.55 && voltage < 3.875){
+..\main.c(480): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(voltage >= 3.875 && voltage < 4.2){
+..\main.c(480): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(voltage >= 3.875 && voltage < 4.2){
+..\main.c(421): warning:  #177-D: variable "bitvalue"  was declared but never referenced
+    int bitvalue = 0;
+..\main.c: 39 warnings, 0 errors
+compiling usbh_adk_core.c...
+..\usbh_adk_core.c(70): warning:  #223-D: function "strncpy" declared implicitly
+  	strncpy(ADK_Machine.acc_manufacturer, manufacture, 64);
+..\usbh_adk_core.c(174): warning:  #68-D: integer conversion resulted in a change of sign
+  				ADK_Machine.protocol = -1;
+..\usbh_adk_core.c(260): warning:  #177-D: variable "Psr"  was declared but never referenced
+  					uint16_t Psr= pphost->device_prop.Dev_Desc.idProduct;
+..\usbh_adk_core.c(309): warning:  #550-D: variable "URB_Status"  was set but never used
+  	URB_STATE URB_Status;
+..\usbh_adk_core.c(310): warning:  #550-D: variable "HCD_Status"  was set but never used
+  	HC_STATUS HCD_Status;
+..\usbh_adk_core.c(311): warning:  #550-D: variable "HCD_GXferCnt"  was set but never used
+  	uint32_t HCD_GXferCnt;
+..\usbh_adk_core.c(385): warning:  #223-D: function "strlen" declared implicitly
+  	length = (uint16_t)strlen(buff)+1;
+..\usbh_adk_core.c(482): warning:  #223-D: function "memcpy" declared implicitly
+  	memcpy(ADK_Machine.outbuff, buff, len);
+..\usbh_adk_core.c(501): warning:  #223-D: function "memcpy" declared implicitly
+  		memcpy(buff, ADK_Machine.inbuff, len);
+..\usbh_adk_core.c: 9 warnings, 0 errors
+compiling usbh_usr.c...
+compiling i2clib.c...
+..\i2clib.c(507): warning:  #550-D: variable "timeout"  was set but never used
+  		uint32_t timeout = I2C_TIMEOUT_MAX;
+..\i2clib.c(508): warning:  #177-D: variable "upper_addr"  was declared but never referenced
+  		uint8_t upper_addr,lower_addr;
+..\i2clib.c(508): warning:  #177-D: variable "lower_addr"  was declared but never referenced
+  		uint8_t upper_addr,lower_addr;
+..\i2clib.c: 3 warnings, 0 errors
+compiling stm32f4_discovery.c...
+compiling stm32f4xx_syscfg.c...
+compiling misc.c...
+compiling stm32f4xx_dac.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_rcc.c...
+assembling startup_stm32f4xx.s...
+compiling stm32f4xx_tim.c...
+compiling usb_core.c...
+compiling usb_hcd.c...
+compiling usb_hcd_int.c...
+compiling usbh_core.c...
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(402): warning:  #223-D: function "Delay" declared implicitly
+  			Delay(100);
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(904): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOA, GPIO_Pin_8, 0);   //ctl1
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(905): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_15, 0);   //ctl2
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(906): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_14, 0);   //ctl3     
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(907): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_0, 0);   //boost enable 
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(909): warning:  #223-D: function "Delay" declared implicitly
+  		Delay(10);
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(911): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOA, GPIO_Pin_8, 1);   //ctl1
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(912): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_15, 1);   //ctl2
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(913): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_14, 1);   //ctl3     
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(914): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(GPIOB, GPIO_Pin_0, 1);   //boost enable 
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(922): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);		
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(922): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);		
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(922): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);		
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(922): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);		
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(922): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);		
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c(922): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  		USBH_ADK_Init(mftr, mdl, desc, ver,uri,sr);		
+..\..\..\Libraries\STM32_USB_HOST_Library\Core\src\usbh_core.c: 16 warnings, 0 errors
+compiling usbh_hcs.c...
+compiling usbh_ioreq.c...
+compiling usbh_stdreq.c...
+linking...
+Program Size: Code=19064 RO-data=464 RW-data=648 ZI-data=3784  
+FromELF: creating hex file...
+".\Demo\Demo.axf" - 0 Error(s), 70 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
+                Keil.STM32F4xx_DFP.2.13.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Demo
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:12
+</pre>
+</body>
+</html>

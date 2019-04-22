@@ -1,0 +1,103 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.25.3.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mridul pandey, jft, LIC=W96WF-63AUC-EXNUX-H8FAP-A3NT4-94MS0
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+E:\GIT_JFT_2\telecom-gps\usbotgMridul\Project\Demonstration\MDK-ARM\STM32F4-Discovery_Demo.uvprojx
+Project File Date:  01/25/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Demo'
+compiling main.c...
+..\main.c(54): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  char binaryreaddata[9] = 0;
+..\main.c(122): warning:  #188-D: enumerated type mixed with another type
+    GPIO_WriteBit(
+PIOA, 
+PIO_Pin_8, 1);   //ctl1
+..\main.c(123): warning:  #188-D: enumerated type mixed with another type
+    GPIO_WriteBit(
+PIOB, 
+PIO_Pin_15, 1);   //ctl2
+..\main.c(124): warning:  #188-D: enumerated type mixed with another type
+    GPIO_WriteBit(
+PIOB, 
+PIO_Pin_14, 1);   //ctl3     
+..\main.c(125): warning:  #188-D: enumerated type mixed with another type
+    GPIO_WriteBit(
+PIOB, 
+PIO_Pin_0, 1);   //boost enable            
+..\main.c(151): warning:  #188-D: enumerated type mixed with another type
+            GPIO_WriteBit(
+PIOA, 
+PIO_Pin_8, 0);    //ctl1
+..\main.c(152): warning:  #188-D: enumerated type mixed with another type
+            GPIO_WriteBit(
+PIOB, 
+PIO_Pin_15, 0);   //ctl2
+..\main.c(153): warning:  #188-D: enumerated type mixed with another type
+            GPIO_WriteBit(
+PIOB, 
+PIO_Pin_14, 0);   //ctl3         
+..\main.c(154): warning:  #188-D: enumerated type mixed with another type
+            GPIO_WriteBit(
+PIOB, 
+PIO_Pin_0, 0);    //boost enable   
+..\main.c(263): warning:  #223-D: function "strcat" declared implicitly
+               case '0': strcat(bin,"0000"); break;
+..\main.c(311): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .020;
+..\main.c(313): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .040;
+..\main.c(315): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .080;
+..\main.c(317): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .160;
+..\main.c(319): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .320;
+..\main.c(321): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += .640;
+..\main.c(323): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      voltage += 1.280;  
+..\main.c(294): warning:  #177-D: variable "bitvalue"  was declared but never referenced
+    int bitvalue = 0;
+..\main.c: 18 warnings, 0 errors
+linking...
+Program Size: Code=14152 RO-data=460 RW-data=180 ZI-data=3668  
+".\Demo\Demo.axf" - 0 Error(s), 18 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.11.0.pack
+                Keil.STM32F4xx_DFP.2.11.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Demo
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

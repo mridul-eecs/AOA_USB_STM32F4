@@ -1,0 +1,62 @@
+		/* Push button Monitor */
+//			if(STM_EVAL_PBGetState(BUTTON_USER) == 0){// && chargershut == 1 ){
+//				if(push_button_tmr > 2){
+//					//toggle power
+//					if(powerstate == 0)powerstate=1;
+//					else powerstate=0;
+//					
+//					if(powerstate == 1)poweron_adkinit();
+//				}
+//			}else{
+//				push_button_tmr = 0;
+//			}
+			powerstate = 1;
+			if(powerstate == 1){
+				
+			/* Read Analog Voltage */
+				readbatvoltage(); 
+
+				/* Host Task handler */
+				USBH_Process(&USB_OTG_Core_dev , &USB_Host);
+			
+				/* Accessory Mode enabled */
+				if( USBH_ADK_getStatus() == ADK_IDLE) {
+					if(firsttime == 0){
+						timercount=0;
+						idle_mincount = 0;
+					}
+					firsttime = 1;
+					len = 0;					
+					len = USBH_ADK_read(&USB_OTG_Core_dev, msg, sizeof(msg));
+					if( len > 0 ){
+						charge=1;   //charge =1 means application is installed						
+					}else{
+						if(idle_mincount >= 1 &&  charge==0){
+							poweroff();
+							chargershut = 1;
+						}
+					}
+								
+					if(charge == 1){
+						memcpy (prev_sno, next_sno, sizeof(next_sno));
+					}
+				}
+//				else{
+//					idle_mincount = 0;
+//				}
+			}else{
+				
+				poweroff();			
+			}
+			Delay(1);
+			USBH_ADK_write(&USB_OTG_Core_dev, msg, sizeof(msg));	
+			readbatvoltage();
+			if (i++ >= 200){
+				if(charging == 1){
+					//led on for 500 ms
+					ledshow(0,0,0,0);
+					if(i >= 400)i = 0;
+			}else if(charging == 0 && powerstate == 0){
+				ledshow(1,1,1,1);   
+			}
+		}
